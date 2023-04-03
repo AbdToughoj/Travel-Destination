@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from './Component/home/Home';
+import Header from "./Component/header/Header";
+import Footer from "./Component/footer/Footer";
+import Tours from "./Component/tours/Tours";
+const ToursData = require("./data/db.json")
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Home/>
+    <Header/>
+    <Footer/>
+    {
+      ToursData.map(data=>{
+        return(
+          <Tours name={data.name} image={data.image} />
+        )
+      })
+    }
+    </>
   );
 }
 
