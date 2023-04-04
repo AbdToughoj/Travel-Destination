@@ -1,8 +1,18 @@
+import Header from "../header/Header";
+import Tours from "../tours/Tours";
+import Footer from "../footer/Footer";
 
-function Home() {
+function Home(props) {
+    const data = props.data;
   return (
     <>
-    <h1></h1>
+      <Header />
+      {
+      data.map((data) => {
+        return <Tours name={data.name} image={data.image} />;
+      })
+      }
+      <Footer />
     </>
   );
 }
