@@ -3,17 +3,18 @@ import Tours from "../tours/Tours";
 import Footer from "../footer/Footer";
 
 function Home(props) {
-    const data = props.data;
+  const data = props.data;
   return (
-    <>
+    <div>
       <Header />
-      {
-      data.map((data) => {
-        return <Tours name={data.name} image={data.image} />;
-      })
-      }
+      <div className="cardsContainer">
+        {data.map((data) => {
+          return <Tours name={data.name} image={data.image} />;
+        })}
+      </div>
+
       <Footer />
-    </>
+    </div>
   );
 }
 
