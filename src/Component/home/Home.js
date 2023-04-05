@@ -1,16 +1,16 @@
 import Header from "../header/Header";
 import Tours from "../tours/Tours";
 import Footer from "../footer/Footer";
+import "./Home.css";
 
 function Home(props) {
-  const data = props.data;
+  const travelSites = props.data;
+
   return (
     <div>
       <Header />
-      <div className="cardsContainer">
-        {data.map((data) => {
-          return <Tours name={data.name} image={data.image} />;
-        })}
+      <div className="homeContainer">
+        <Tours travelSites={travelSites} />
       </div>
 
       <Footer />

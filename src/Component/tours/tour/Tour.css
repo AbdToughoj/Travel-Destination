@@ -1,0 +1,19 @@
+.card {
+  background-color: #dedede;
+  text-align: center;
+  margin: 20px;
+}
+.cardImg {
+  width: 400px;
+  height: 300px;
+}
+.cardTitle {
+    font-size: 1.5rem;
+}
+.cardBody {
+    padding: 20px;
+}
+.cardLink {
+  text-decoration: none;
+  color: black;
+}

@@ -16,6 +16,14 @@ code {
   background-color: red;
 }
 
-.cardsContainer {
-  display: flex;
+.showPartOfText {
+  width: 100px;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.showAllText {
+  width: auto;
+  height: auto;
 }
